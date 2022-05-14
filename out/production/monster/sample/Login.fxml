@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<StackPane fx:id="stkPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+           prefHeight="360.0" prefWidth="320.0" xmlns="http://javafx.com/javafx/11.0.1"
+           xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <Pane fx:id="pPane">
+        <opaqueInsets>
+            <Insets/>
+        </opaqueInsets>
+        <children>
+            <VBox blendMode="MULTIPLY" layoutX="14.0" layoutY="56.0" maxHeight="-Infinity" maxWidth="-Infinity"
+                  minHeight="-Infinity" minWidth="-Infinity" prefHeight="130.0" prefWidth="200.0" spacing="20.0">
+                <opaqueInsets>
+                    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+                </opaqueInsets>
+                <children>
+                    <TextField maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+                               prefHeight="0.0" prefWidth="0.0"/>
+                    <TextField fx:id="usernameTextField" alignment="CENTER" blendMode="MULTIPLY" maxHeight="-Infinity"
+                               maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+                               onKeyPressed="#logInInput" prefHeight="40.0" prefWidth="200.0" promptText="اسم المستخدم"
+                               style="-fx-background-color: black; -fx-text-inner-color: white;">
+                        <font>
+                            <Font name="Calibri Bold" size="20.0"/>
+                        </font>
+                    </TextField>
+                    <PasswordField fx:id="passwordField" alignment="CENTER" blendMode="MULTIPLY" maxHeight="-Infinity"
+                                   maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+                                   onKeyPressed="#logInInput" prefHeight="40.0" prefWidth="200.0"
+                                   promptText="كلمة المرور"
+                                   style="-fx-background-color: black; -fx-text-inner-color: white;">
+                        <font>
+                            <Font name="Calibri Bold" size="20.0"/>
+                        </font>
+                    </PasswordField>
+                </children>
+                <padding>
+                    <Insets bottom="10.0" top="10.0"/>
+                </padding>
+            </VBox>
+            <Button fx:id="logInButton" alignment="CENTER" blendMode="MULTIPLY" contentDisplay="CENTER" layoutX="237.0"
+                    layoutY="117.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                    minWidth="-Infinity" mnemonicParsing="false" onAction="#logIn" prefHeight="35.0" prefWidth="60.0"
+                    style="-fx-background-color: black;" text="دخول" textAlignment="CENTER" textFill="#e8e3e3">
+                <font>
+                    <Font name="Calibri Bold" size="17.0"/>
+                </font>
+            </Button>
+            <ImageView fx:id="icon" blendMode="MULTIPLY" fitHeight="195.0" fitWidth="200.0" layoutX="60.0"
+                       layoutY="203.0" pickOnBounds="true" preserveRatio="true">
+                <image>
+                    <Image url="@../monster%20gym.jpeg"/>
+                </image>
+            </ImageView>
+            <Label fx:id="logInStatusLabel" alignment="CENTER" layoutY="14.0" maxHeight="-Infinity" maxWidth="-Infinity"
+                   minHeight="-Infinity" minWidth="-Infinity" prefWidth="320.0" text="تسجيل الدخول">
+                <font>
+                    <Font name="Calibri Bold" size="24.0"/>
+                </font>
+                <padding>
+                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+                </padding>
+            </Label>
+        </children>
+    </Pane>
+</StackPane>

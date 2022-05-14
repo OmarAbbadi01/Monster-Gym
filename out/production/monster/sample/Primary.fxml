@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <center>
+        <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0" spacing="30.0" BorderPane.alignment="CENTER">
+            <children>
+                <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="60.0">
+                    <children>
+                        <Button fx:id="searchButton" defaultButton="true" mnemonicParsing="false" prefHeight="40.0" prefWidth="60.0" style="-fx-background-color: black;" text="بحث" textFill="WHITE">
+                            <font>
+                                <Font name="Arial Bold" size="20.0" />
+                            </font>
+                        </Button>
+                    </children>
+                </StackPane>
+                <TextField fx:id="searchTextField" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="800.0" promptText="اسم المشترك" style="-fx-background-color: black; -fx-text-inner-color: white;">
+                    <font>
+                        <Font name="Calibri Bold" size="34.0" />
+                    </font>
+                </TextField>
+            </children>
+            <padding>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </padding>
+            <BorderPane.margin>
+                <Insets />
+            </BorderPane.margin>
+        </HBox>
+    </center>
+    <top>
+        <HBox alignment="TOP_RIGHT" prefHeight="70.0" prefWidth="1200.0" spacing="20.0" BorderPane.alignment="CENTER_RIGHT">
+            <children>
+                <Button fx:id="dateSearchButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#searchByDate" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: black;" text="بحث بالتاريخ" textFill="WHITE">
+                    <font>
+                        <Font name="Calibri Bold" size="16.0" />
+                    </font>
+                </Button>
+                <DatePicker fx:id="searchDatePicker" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="190.0" promptText="التاريخ" style="-fx-background-color: black;" />
+                <Region prefHeight="45.0" prefWidth="472.0" />
+                <Button fx:id="reportButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="90.0" style="-fx-background-color: black;" text="تقرير اليوم" textFill="WHITE">
+                    <font>
+                        <Font name="Calibri Bold" size="16.0" />
+                    </font>
+                </Button>
+                <Button fx:id="passChangeButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#changePassword" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: black;" text="تغيير كلمة المرور" textFill="WHITE">
+                    <font>
+                        <Font name="Calibri Bold" size="16.0" />
+                    </font>
+                </Button>
+                <Button fx:id="newCustomerButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#newCustomer" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: black;" text="مشترك جديد" textFill="WHITE">
+                    <font>
+                        <Font name="Calibri Bold" size="16.0" />
+                    </font>
+                </Button>
+            </children>
+            <padding>
+                <Insets bottom="5.0" left="20.0" right="20.0" top="20.0" />
+            </padding>
+        </HBox>
+    </top>
+    <bottom>
+        <Button fx:id="signOutButton" mnemonicParsing="false" onAction="#signOut" prefHeight="35.0" prefWidth="70.0" style="-fx-background-color: black;" text="خروج" textAlignment="CENTER" textFill="WHITE" BorderPane.alignment="BOTTOM_LEFT">
+            <font>
+                <Font name="Calibri Bold" size="16.0" />
+            </font>
+            <BorderPane.margin>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </BorderPane.margin>
+        </Button>
+    </bottom>
+</BorderPane>

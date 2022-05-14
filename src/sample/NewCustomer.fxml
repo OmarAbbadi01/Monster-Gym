@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0"
+            prefWidth="400.0" style="-fx-border-color: black; -fx-border-width: 0;"
+            xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="sample.Controller">
+    <children>
+        <VBox prefHeight="200.0" prefWidth="100.0">
+            <children>
+                <TextField maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+                           onKeyPressed="#newCustomerInput" prefHeight="0.0" prefWidth="0.0"/>
+            </children>
+        </VBox>
+        <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+              minWidth="-Infinity" prefHeight="600.0" prefWidth="400.0" spacing="20.0">
+            <children>
+                <Label fx:id="newCusStatusLabel" alignment="TOP_CENTER" text="تسجيل مشترك جديد">
+                    <font>
+                        <Font name="Calibri Bold" size="26.0"/>
+                    </font>
+                </Label>
+                <TextField fx:id="customerName" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity"
+                           minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#newCustomerInput"
+                           onKeyReleased="#setDefaultDate" prefHeight="33.0" prefWidth="300.0"
+                           promptText="اسم المشترك *" style="-fx-background-color: black; -fx-text-inner-color: white;">
+                    <font>
+                        <Font name="Calibri Bold" size="16.0"/>
+                    </font>
+                </TextField>
+                <TextField fx:id="customerAge" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity"
+                           minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#newCustomerInput" prefHeight="33.0"
+                           prefWidth="300.0" promptText="العمر *"
+                           style="-fx-background-color: black; -fx-text-inner-color: white;">
+                    <font>
+                        <Font name="Calibri Bold" size="16.0"/>
+                    </font>
+                </TextField>
+                <TextField fx:id="customerPhone" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity"
+                           minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#newCustomerInput" prefHeight="33.0"
+                           prefWidth="300.0" promptText="رقم الهاتف"
+                           style="-fx-background-color: black; -fx-text-inner-color: white;">
+                    <font>
+                        <Font name="Calibri Bold" size="16.0"/>
+                    </font>
+                </TextField>
+                <TextField fx:id="customerAddress" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity"
+                           minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#newCustomerInput" prefHeight="33.0"
+                           prefWidth="300.0" promptText="العنوان"
+                           style="-fx-background-color: black; -fx-text-inner-color: white;">
+                    <font>
+                        <Font name="Calibri Bold" size="16.0"/>
+                    </font>
+                </TextField>
+                <DatePicker fx:id="startDate" editable="false" maxHeight="-Infinity" maxWidth="-Infinity"
+                            minHeight="-Infinity" minWidth="-Infinity" onAction="#setNextMonthDate" prefHeight="33.0"
+                            prefWidth="300.0" promptText="تاريخ البداية" style="-fx-background-color: black;"/>
+                <DatePicker fx:id="endDate" editable="false" maxHeight="-Infinity" maxWidth="-Infinity"
+                            minHeight="-Infinity" minWidth="-Infinity" prefHeight="33.0" prefWidth="300.0"
+                            promptText="تاريخ النهاية" style="-fx-background-color: black;"/>
+                <TextField fx:id="moneyAmount" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity"
+                           minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#newCustomerInput" prefHeight="33.0"
+                           prefWidth="300.0" promptText="المبلغ *"
+                           style="-fx-background-color: black; -fx-text-inner-color: white;">
+                    <font>
+                        <Font name="Calibri Bold" size="16.0"/>
+                    </font>
+                </TextField>
+                <TextField fx:id="notesField" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity"
+                           minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#newCustomerInput" prefHeight="33.0"
+                           prefWidth="300.0" promptText="ملاحظات"
+                           style="-fx-background-color: black; -fx-text-inner-color: white;">
+                    <font>
+                        <Font name="Calibri Bold" size="16.0"/>
+                    </font>
+                </TextField>
+                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="50.0">
+                    <children>
+                        <Button fx:id="signUpCustomerButton" mnemonicParsing="false" onAction="#signUpCustomer"
+                                style="-fx-background-color: black;" text="تسجيل" textFill="WHITE">
+                            <font>
+                                <Font name="Calibri Bold" size="22.0"/>
+                            </font>
+                        </Button>
+                    </children>
+                </HBox>
+            </children>
+            <padding>
+                <Insets bottom="15.0" left="15.0" right="15.0" top="15.0"/>
+            </padding>
+        </VBox>
+    </children>
+</AnchorPane>
